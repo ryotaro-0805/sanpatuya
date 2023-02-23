@@ -1,0 +1,473 @@
+@keyframes animation {
+    0% {
+        opacity: 0;
+        background-color: black;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+    font-family: serif;
+}
+
+body {
+    animation: animation 1s;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+header {
+    position: relative;
+}
+
+.title_wrapper {
+    height: 40vw;
+    width: 100%;
+    background-image: url("../img/about_pic1.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+    padding-top: 100px;
+    text-align: center;
+    font-size: 3vw;
+}
+
+.about_header_h1 {
+    background-color: rgba(127, 136, 255, 0.5);
+    font-family: "Kaushan Script", cursive;
+    font-weight: 100;
+    font-size: 100%;
+    letter-spacing: 1px;
+    text-shadow: 5px 5px 5px rgb(0, 0, 0);
+    color: rgb(75, 9, 42);
+    transform: rotate(-8deg);
+}
+
+.title_wrapper a {
+    text-decoration: none;
+}
+
+.title_ja {
+    font-family: serif;
+    font-size: 1rem;
+    color: aliceblue;
+    background-color: rgba(16, 17, 17, 0.4);
+    border-radius: 5px;
+    line-height: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 15;
+    margin: 5px 10px;
+    padding: 5px 10px;
+    transition: 0.25s;
+}
+
+.title_ja:hover {
+    background-color: rgba(16, 17, 17, 0.6);
+}
+
+.text {
+    font-size: 1.5rem;
+    font-family: serif;
+    color: red;
+    text-shadow: 2px 2px 4px black, -2px -2px 4px whitesmoke;
+    letter-spacing: 2px;
+}
+
+.caution_p {
+    color: red;
+    background-color: rgba(240, 248, 255, 0.5);
+    border-radius: 5px;
+    font-weight: bold;
+    position: absolute;
+    top: 90px;
+    left: 10px;
+    z-index: 12;
+}
+
+.menu_wrapper {
+    position: fixed;
+    top: 0;
+    z-index: 12;
+    height: 60px;
+    width: 100%;
+    background-color: #ebe5e5;
+    opacity: 0.9;
+}
+
+.menu_wrapper ul {
+    font-family: serif;
+    list-style: none;
+    display: flex;
+    position: fixed;
+    top: 0;
+    right: 5%;
+    z-index: 15;
+}
+
+.menu_li {
+    width: 100px;
+    color: white;
+    margin-left: 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 0 15px;
+    border-radius: 5px;
+    transition: 0.25s;
+    display: flex;
+    justify-content: center;
+}
+
+.menu_wrapper ul li:hover {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+/*オープンメニュー  */
+.menu_wrapper2 {
+    color: white;
+    padding: 50px 0;
+    width: 80%;
+    height: 300px;
+    border-radius: 5px;
+    position: fixed;
+    top: 0px;
+    left: 0;
+    z-index: 20;
+    background-color: rgba(55, 71, 71, 0.9);
+    transform: translateX(-100%);
+    transition: 0.25s;
+    opacity: 0;
+}
+
+/*オープンメニュー  ここまで*/
+
+/* メニュー共通 */
+.menu {
+    background-color: #ebe5e5;
+    border-top: solid 3px red;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    width: 100%;
+}
+
+.line_div {
+    width: 100%;
+    height: 5px;
+    background-color: darkblue;
+}
+
+/* オープンメニュー */
+.open_menu_container {
+    display: none;
+}
+
+/* main */
+.about_main {
+    margin-top: 0px;
+    background-color: #ebe5e5;
+    margin-bottom: 0px;
+}
+
+
+/* スタイリスト */
+.about_stylist h2 , .about_menu h2{
+    margin: 0px 0 50px 0;
+    padding-top: 50px;
+    border-top: 5px solid red;
+    text-align: center;
+    font-size: 40px;
+}
+
+.stylist_wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+    font-family: "Kaushan Script", cursive;
+    border: solid 1px black;
+    border-radius: 5px;
+    display: flex;
+}
+
+.stylist_img {
+    width: 30%;
+    margin: 0 10%;
+}
+
+.stylist_p{
+    font-size: 20px;
+    margin-top: 50px;
+    margin-left: 10px;
+}
+
+.stylist_second {
+    flex-direction: row-reverse;
+    margin-top: 50px;
+}
+
+
+/* メニュー */
+
+.about_menu p{
+    max-width: 1000px;
+    width: 100%;
+    text-align: right;
+    font-size: 15px;
+    margin: 0 auto;
+}
+
+.about_menu p::after{
+    content: "　　";
+}
+
+.about_menu_table {
+    max-width: 1000px;
+    width: 100%;
+    background-color: darkgrey;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+
+.menu_top {
+    width: 100%;
+    background-color: rgb(212, 211, 228);
+}
+
+.about_menu_table tr {
+    text-align: left;
+    background-color: antiquewhite;
+    border-bottom: 1px solid #000;
+}
+
+.about_menu_table td, th{
+    height: 50px;
+ padding-left: 70px;
+}
+
+.menu_top{
+    padding-left: 50px;
+}
+
+.about_img{
+    width: 100%;
+    height: 30vh;
+    object-fit: cover;
+    object-position: 50% 60%;
+    display: flex;
+    border-radius: 5px;
+    box-shadow: -10px -10px 15px white;
+}
+
+/* お問い合わせ */
+.title_wrapper.info{
+    height: 30vw;
+    width: 30%;
+    margin: 100px auto;
+    background-image: url("../img/info_img.png");
+    background-position: 0px -150px;
+    background-position: center top;
+}
+
+.info_header_h1{
+    background-color: rgba(127, 136, 255, 0.5);
+    font-family: "Kaushan Script", cursive;
+    font-weight: 100;
+    font-size: 100%;
+    letter-spacing: 1px;
+    text-shadow: 5px 5px 5px rgb(0, 0, 0);
+    color: rgb(75, 9, 42);
+    transform: rotate(-8deg);
+    position: absolute;
+    top: 50%;
+    left: 20%;
+}
+
+.info_main{
+    background-color: #ebe5e5;;
+    font-family: "Kaushan Script", cursive;
+    margin: 0px auto;
+    padding: 0px 0px;
+}
+
+.contact-title{
+    font-size: 18px;
+}
+
+.info_wrapper div{
+    margin: 30px 0px;
+}
+
+.info_wrapper{
+    width: 50%;
+    margin: 0px auto;
+}
+
+.info_wrapper span{
+    color: red;
+    font-size: 10px;
+    vertical-align: top;
+}
+
+.info_wrapper p:nth-of-type(3){
+    padding-top: 30px;
+}
+
+.info_wrapper p:nth-of-type(4){
+    margin-bottom: 0;
+    padding-bottom: 30px;
+}
+
+/* 営業文章 */
+.info_info{ 
+    color: red;
+    font-weight: bold;
+    padding: 50px 0;
+}
+
+.info_lavel{
+    vertical-align: top;
+}
+
+/* お問い合わせ　ここまで */
+
+/* アクセス */
+.access{
+    height: 50vh;
+    margin: 0px auto;
+    background-image: url("../img/access.png");
+    background-size: contain;
+    background-color:beige;
+}
+
+.access_header_h1{
+    position: absolute;
+    font-size: 50px;
+}
+
+.access_h2{
+    margin-left: 10%;
+}
+
+.access_p {
+    margin-left: 15%;
+}
+
+.access_wrapper iframe{
+    width: 80%;
+    height: 50vh;
+    display: block;
+    margin: 0 auto;
+}
+
+.access_a{
+    color:blue;
+
+}
+
+/* アクセス ここまで*/
+
+/* ニュース　お知らせ */
+.news{
+    height: 30vh;
+    margin: 100px auto;
+    background-image: url("../img/news.png");
+    background-size: contain;
+}
+
+.news_wrapper{
+    width: 1000px;
+    margin: 0 auto;
+    font-family: "Kaushan Script", cursive;;
+}
+
+.line_div_red{
+    border-top: 5px solid red;
+}
+
+
+.news_header_h1{
+    font-family: 'Kaushan Script', cursive;
+    font-size: 40px;
+}
+
+.news_date{
+    color: darkblue;
+    font-weight: bold;
+    margin-left: 50px;
+    margin-bottom: 0;
+}
+
+.news_text{
+    font-size: 20px;
+    margin-top: 0;
+    margin-left: 30px;
+}
+
+.news_date span{
+    background-color:rgb(179, 35, 35);
+    color: white;
+    font-size: 15px;
+    vertical-align: 5px;
+    margin-left: 10px;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+/* ニュース　お知らせ ここまで*/
+
+/* フッター */
+footer {
+    background: linear-gradient(135deg, blue, white, red);
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* go top */
+.goTop {
+    transition: 0.25s;
+    position: fixed;
+    bottom: 5%;
+    right: 5%;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.goTop.active {
+    opacity: 0.5;
+    pointer-events: all;
+}
+.material-symbols-outlined {
+    font-size: 80px;
+    color:rgb(187, 27, 27);
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
+
+/* intersection Observer */
+.intersection_observer{
+    opacity: 0;
+    transform: scale(.8);
+    transition: 1s;
+}
+
+.intersection_observer.active{
+    opacity: 1;
+    transform: none;
+}
